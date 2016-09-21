@@ -1,0 +1,163 @@
+
+demo.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000fe  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .stab         000006cc  00000000  00000000  00000154  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  2 .stabstr      00000090  00000000  00000000  00000820  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_aranges 00000020  00000000  00000000  000008b0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_pubnames 00000038  00000000  00000000  000008d0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   0000018d  00000000  00000000  00000908  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 0000010c  00000000  00000000  00000a95  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000002b1  00000000  00000000  00000ba1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000030  00000000  00000000  00000e54  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000000f5  00000000  00000000  00000e84  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000000ce  00000000  00000000  00000f79  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_pubtypes 00000039  00000000  00000000  00001047  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000030  00000000  00000000  00001080  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 4d 00 	jmp	0x9a	; 0x9a <__ctors_end>
+   4:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+   8:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+   c:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  10:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  14:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  18:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  1c:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  20:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  24:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  28:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  2c:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  30:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  34:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  38:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  3c:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  40:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  44:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  48:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  4c:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+  50:	0c 94 57 00 	jmp	0xae	; 0xae <__bad_interrupt>
+
+00000054 <font7x5>:
+  54:	00 00 00 00 00 00 00 7d 00 00 00 70 00 70 00 3e     .......}...p.p.>
+  64:	45 49 51 3e 00 21 7f 01 00 21 43 45 49 31 42 41     EIQ>.!...!CEI1BA
+  74:	51 69 46 3f 44 44 44 3f 7f 49 49 49 36 3e 41 41     QiF?DDD?.III6>AA
+  84:	41 22 02 15 15 15 0f 7f 09 11 11 0e 0e 11 11 11     A"..............
+  94:	02 7f 7f 7f 7f 7f                                   ......
+
+0000009a <__ctors_end>:
+  9a:	11 24       	eor	r1, r1
+  9c:	1f be       	out	0x3f, r1	; 63
+  9e:	cf e5       	ldi	r28, 0x5F	; 95
+  a0:	d8 e0       	ldi	r29, 0x08	; 8
+  a2:	de bf       	out	0x3e, r29	; 62
+  a4:	cd bf       	out	0x3d, r28	; 61
+  a6:	0e 94 76 00 	call	0xec	; 0xec <main>
+  aa:	0c 94 7d 00 	jmp	0xfa	; 0xfa <_exit>
+
+000000ae <__bad_interrupt>:
+  ae:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000b2 <DOTputChar75>:
+void DOTputChar75(uint8_t chr){
+	uint8_t		line=1,i;
+	uint16_t	tchr= chr;
+	for(i=0;i<5;i++){
+		CTRL_PORT = line;
+		DATA_PORT = ~pgm_read_byte(&font7x5[((tchr -32)*5) + i]);
+  b2:	95 e0       	ldi	r25, 0x05	; 5
+  b4:	89 9f       	mul	r24, r25
+  b6:	c0 01       	movw	r24, r0
+  b8:	11 24       	eor	r1, r1
+  ba:	9c 01       	movw	r18, r24
+  bc:	20 5a       	subi	r18, 0xA0	; 160
+  be:	30 40       	sbci	r19, 0x00	; 0
+#define DATA_PORT	PORTD
+#define DATA_DDR	DDRD
+#define CTRL_PORT	PORTC
+#define CTRL_DDR	DDRC
+
+void DOTputChar75(uint8_t chr){
+  c0:	8b 59       	subi	r24, 0x9B	; 155
+  c2:	90 40       	sbci	r25, 0x00	; 0
+	uint8_t		line=1,i;
+  c4:	61 e0       	ldi	r22, 0x01	; 1
+    milliseconds can be achieved.
+ */
+void
+_delay_loop_2(uint16_t __count)
+{
+	__asm__ volatile (
+  c6:	48 ee       	ldi	r20, 0xE8	; 232
+  c8:	53 e0       	ldi	r21, 0x03	; 3
+	uint16_t	tchr= chr;
+	for(i=0;i<5;i++){
+		CTRL_PORT = line;
+  ca:	65 bb       	out	0x15, r22	; 21
+		DATA_PORT = ~pgm_read_byte(&font7x5[((tchr -32)*5) + i]);
+  cc:	f9 01       	movw	r30, r18
+  ce:	ec 5a       	subi	r30, 0xAC	; 172
+  d0:	ff 4f       	sbci	r31, 0xFF	; 255
+  d2:	e4 91       	lpm	r30, Z+
+  d4:	e0 95       	com	r30
+  d6:	e2 bb       	out	0x12, r30	; 18
+		line	<<= 1;
+  d8:	66 0f       	add	r22, r22
+  da:	fa 01       	movw	r30, r20
+  dc:	31 97       	sbiw	r30, 0x01	; 1
+  de:	f1 f7       	brne	.-4      	; 0xdc <DOTputChar75+0x2a>
+  e0:	2f 5f       	subi	r18, 0xFF	; 255
+  e2:	3f 4f       	sbci	r19, 0xFF	; 255
+#define CTRL_DDR	DDRC
+
+void DOTputChar75(uint8_t chr){
+	uint8_t		line=1,i;
+	uint16_t	tchr= chr;
+	for(i=0;i<5;i++){
+  e4:	28 17       	cp	r18, r24
+  e6:	39 07       	cpc	r19, r25
+  e8:	81 f7       	brne	.-32     	; 0xca <DOTputChar75+0x18>
+		CTRL_PORT = line;
+		DATA_PORT = ~pgm_read_byte(&font7x5[((tchr -32)*5) + i]);
+		line	<<= 1;
+		_delay_loop_2(1000);
+	}
+}
+  ea:	08 95       	ret
+
+000000ec <main>:
+int main(void)
+{
+    DATA_DDR	= 0xFF;
+  ec:	8f ef       	ldi	r24, 0xFF	; 255
+  ee:	81 bb       	out	0x11, r24	; 17
+	CTRL_PORT	= 0xFF;
+  f0:	85 bb       	out	0x15, r24	; 21
+	while(1){
+		DOTputChar75('4');
+  f2:	84 e3       	ldi	r24, 0x34	; 52
+  f4:	0e 94 59 00 	call	0xb2	; 0xb2 <DOTputChar75>
+  f8:	fc cf       	rjmp	.-8      	; 0xf2 <main+0x6>
+
+000000fa <_exit>:
+  fa:	f8 94       	cli
+
+000000fc <__stop_program>:
+  fc:	ff cf       	rjmp	.-2      	; 0xfc <__stop_program>

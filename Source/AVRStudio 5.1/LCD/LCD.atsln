@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# AvrStudio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "LCD", "LCD\LCD.cproj", "{D26C4E81-0205-4D34-8237-10A98C0D2938}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "LCD_CACUL", "LCD_CACUL\LCD_CACUL.cproj", "{88E7CACE-F243-417A-9E85-3F1E2A305858}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D26C4E81-0205-4D34-8237-10A98C0D2938}.Debug|AVR.ActiveCfg = Debug|AVR
+		{D26C4E81-0205-4D34-8237-10A98C0D2938}.Debug|AVR.Build.0 = Debug|AVR
+		{D26C4E81-0205-4D34-8237-10A98C0D2938}.Release|AVR.ActiveCfg = Release|AVR
+		{D26C4E81-0205-4D34-8237-10A98C0D2938}.Release|AVR.Build.0 = Release|AVR
+		{88E7CACE-F243-417A-9E85-3F1E2A305858}.Debug|AVR.ActiveCfg = Debug|AVR
+		{88E7CACE-F243-417A-9E85-3F1E2A305858}.Debug|AVR.Build.0 = Debug|AVR
+		{88E7CACE-F243-417A-9E85-3F1E2A305858}.Release|AVR.ActiveCfg = Release|AVR
+		{88E7CACE-F243-417A-9E85-3F1E2A305858}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
