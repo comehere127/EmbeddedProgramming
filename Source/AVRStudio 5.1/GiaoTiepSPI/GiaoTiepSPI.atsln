@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# AvrStudio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "SPI_Master", "GiaoTiepSPI\SPI_Master.cproj", "{4FDD12D4-F855-4634-B1A5-C68B82F8870F}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "SPI_Slave", "SPI_Slave\SPI_Slave.cproj", "{A0ADE24B-8E21-4B0D-BB8E-0CEDF9FD2FBF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FDD12D4-F855-4634-B1A5-C68B82F8870F}.Debug|AVR.ActiveCfg = Debug|AVR
+		{4FDD12D4-F855-4634-B1A5-C68B82F8870F}.Debug|AVR.Build.0 = Debug|AVR
+		{4FDD12D4-F855-4634-B1A5-C68B82F8870F}.Release|AVR.ActiveCfg = Release|AVR
+		{4FDD12D4-F855-4634-B1A5-C68B82F8870F}.Release|AVR.Build.0 = Release|AVR
+		{A0ADE24B-8E21-4B0D-BB8E-0CEDF9FD2FBF}.Debug|AVR.ActiveCfg = Debug|AVR
+		{A0ADE24B-8E21-4B0D-BB8E-0CEDF9FD2FBF}.Debug|AVR.Build.0 = Debug|AVR
+		{A0ADE24B-8E21-4B0D-BB8E-0CEDF9FD2FBF}.Release|AVR.ActiveCfg = Release|AVR
+		{A0ADE24B-8E21-4B0D-BB8E-0CEDF9FD2FBF}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
