@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# AvrStudio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "TW1", "TW1\TW1.cproj", "{1DD0D8E1-3F2E-40D0-9AA5-CFA833A33E63}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "TW2", "TW2\TW2.cproj", "{7C70AB4C-CE88-4706-9BD6-9A14061A9138}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DD0D8E1-3F2E-40D0-9AA5-CFA833A33E63}.Debug|AVR.ActiveCfg = Debug|AVR
+		{1DD0D8E1-3F2E-40D0-9AA5-CFA833A33E63}.Debug|AVR.Build.0 = Debug|AVR
+		{1DD0D8E1-3F2E-40D0-9AA5-CFA833A33E63}.Release|AVR.ActiveCfg = Release|AVR
+		{1DD0D8E1-3F2E-40D0-9AA5-CFA833A33E63}.Release|AVR.Build.0 = Release|AVR
+		{7C70AB4C-CE88-4706-9BD6-9A14061A9138}.Debug|AVR.ActiveCfg = Debug|AVR
+		{7C70AB4C-CE88-4706-9BD6-9A14061A9138}.Debug|AVR.Build.0 = Debug|AVR
+		{7C70AB4C-CE88-4706-9BD6-9A14061A9138}.Release|AVR.ActiveCfg = Release|AVR
+		{7C70AB4C-CE88-4706-9BD6-9A14061A9138}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
