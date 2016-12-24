@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# AvrStudio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "TextLCD", "TextLCD\TextLCD.cproj", "{A3AE2F9F-09D6-4C10-9B3E-22E5DA838DAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3AE2F9F-09D6-4C10-9B3E-22E5DA838DAA}.Debug|AVR.ActiveCfg = Debug|AVR
+		{A3AE2F9F-09D6-4C10-9B3E-22E5DA838DAA}.Debug|AVR.Build.0 = Debug|AVR
+		{A3AE2F9F-09D6-4C10-9B3E-22E5DA838DAA}.Release|AVR.ActiveCfg = Release|AVR
+		{A3AE2F9F-09D6-4C10-9B3E-22E5DA838DAA}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -367,10 +367,10 @@ LOAD c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.2
  *(.debug_frame)
  .debug_frame   0x00000000       0xd0 LCD_CACUL.o
 
-.debug_str      0x00000000      0x19e
+.debug_str      0x00000000      0x1c3
  *(.debug_str)
- .debug_str     0x00000000      0x19e LCD_CACUL.o
-                                0x1d7 (size before relaxing)
+ .debug_str     0x00000000      0x1c3 LCD_CACUL.o
+                                0x1fc (size before relaxing)
 
 .debug_loc      0x00000000      0x196
  *(.debug_loc)
